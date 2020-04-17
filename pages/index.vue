@@ -64,7 +64,7 @@ export default {
         formData.append('boardID', this.uploadForm.boardID)
         formData.append('file', this.uploadForm.data)
         formData.append('shuffle', this.uploadForm.shuffle)
-        this.$axios.$post('/upload',
+        this.$axios.$post('https://miro-broker.herokuapp.com/api/upload',
           formData,
           {        
             headers: {
@@ -86,7 +86,6 @@ export default {
   }
 }
 </script>
-1d0bf44e-c208-4d5d-97ef-b21b4a3631b9
 <style>
 .container {
   max-width: 500px;
