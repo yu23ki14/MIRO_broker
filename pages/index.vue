@@ -1,6 +1,7 @@
 <template>
   <div class="container">
-    <p class="title is-3">MIRO Broker</p>
+    <p class="title is-3">MIRO Broker <span class="subtitle is-5">csv2mirosticker</span></p>
+    <p class="subtitle is-6">Developed by Yuki Kawabe <a href="https://twitter.com/k_0214" target="blank">twitter</a></p>
     
     <div class="importer">
       <p>
@@ -27,15 +28,6 @@
       </label>
       <button class="button is-primary" :disabled="uploadstatus != 0" :class="{'is-loading': uploadstatus == 1}" @click="upload">{{uploadstatus == 0 ? "流し込み" : uploadstatus == 2 ? "成功": "失敗：もう一度お試しください"}}</button>
     </div>
-    <!--
-    <hr>
-    <div class="exporter">
-      <p class="title is-4">PDFダウンロード</p>
-      <input type="password" class="input" placeholder="クレデンシャルコードを入力してください。">
-      <input type="text" class="input" placeholder="ダウンロードするボードIDを入力してください。">
-      <button class="button is-info" :class="{'is-loading': downloadstatus == 1}">{{downloadstatus == 0 ? "ダウンロード" : downloadstatus == 2 ? "成功": "失敗：もう一度お試しください"}}</button>
-    </div>
-    -->
   </div>
 </template>
 
@@ -122,7 +114,7 @@ input[type="text"], input[type="password"], button, .file, .shuffle {
   height: 18px;
 }
 
-.instruction {
+.container a {
   text-decoration: underline
 }
 </style>
