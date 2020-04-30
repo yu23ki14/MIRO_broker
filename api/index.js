@@ -25,7 +25,7 @@ app.post("/upload", (req, res) => {
       csvtojson().fromFile(filePath).then((jsonObj)=>{
         let i = 0
         const objSize = jsonObj.length
-        if (shuffle) {
+        if (shuffle === true) {
           jsonObj = Fshuffle(jsonObj)
         }
         let post = setInterval(() => {
